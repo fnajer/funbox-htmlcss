@@ -1,0 +1,298 @@
+.card-section__label {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card-section__label .card-section__btn,
+.card-section__label .card-section__dot {
+  cursor: pointer;
+  font-weight: 700;
+  color: #1698d9;
+}
+
+.card-section__label .card-section__btn {
+  border-bottom: 1px dashed #1698d9;
+}
+
+.card-section__label .card-section__btn:hover {
+  color: #2ea8e6;
+  border-color: #2ea8e6;
+}
+
+.card-section__label-disabled,
+.card-section__label-selected {
+  display: none;
+}
+
+.card-section__label-disabled {
+  color: #ff6;
+}
+.card {
+  position: relative;
+  box-sizing: border-box;
+  width: 320px;
+  height: 480px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.card .card__tip {
+  position: absolute;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(312deg,#f2f2f2 0%,#f2f2f2 48%,#1698d9 48%,#1698d9 54.5%,transparent 54.5%,transparent 100%);
+}
+
+.card .card__header {
+  position: absolute;
+  right: 0;
+  width: 275px;
+  height: 45px;
+  background-color: #f2f2f2;
+  color: #666;
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+  border-top-right-radius: 10px;
+}
+
+.card .card__header .card__subtitle {
+  margin: 16px 10px;
+  font-size: 16px;
+}
+
+.card .card__content {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  height: 435px;
+  width: 100%;
+  padding: 0 45px 10px;
+  border: 4px solid #1698d9;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  font-size: 14px;
+  color: #666;
+  background: #f2f2f2 url("../images/cat.png") no-repeat -30px 160px;
+}
+
+.card .card__content .card__title {
+  margin-bottom: 15px;
+  font-family: 'Trebuchet MS Bold',sans-serif;
+}
+
+.card .card__content .card__title .card__name {
+  font-size: 48px;
+}
+
+.card .card__content .card__title .card__subname {
+  font-size: 24px;
+}
+
+.card .card__content .card__description {
+  font-size: 14px;
+}
+
+.card .card__content .card__description .card__count {
+  font-weight: 700;
+}
+
+.card .card__content .card__weight {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  line-height: 1;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.card .card__content .card__weight .card__amount {
+  margin-top: 5px;
+  font-size: 42px;
+}
+
+.card .card__content .card__weight .card__unit {
+  font-size: 21px;
+}
+
+.card_default .card__tip {
+  background: linear-gradient(312deg,#f2f2f2 0%,#f2f2f2 48%,#1698d9 48%,#1698d9 54.5%,transparent 54.5%,transparent 100%);
+}
+
+.card_default .card__title {
+  color: #000;
+}
+
+.card_default .card__content,
+.card_default .card__header {
+  border-color: #1698d9;
+}
+
+.card_default .card__weight {
+  background-color: #1698d9;
+}
+
+.card_default:hover .card__tip {
+  background: linear-gradient(312deg,#f2f2f2 0%,#f2f2f2 48%,#2ea8e6 48%,#2ea8e6 54.5%,transparent 54.5%,transparent 100%);
+}
+
+.card_default:hover .card__content,
+.card_default:hover .card__header {
+  border-color: #2ea8e6;
+}
+
+.card_default:hover .card__weight {
+  background-color: #2ea8e6;
+}
+
+.card_selected .card__tip {
+  background: linear-gradient(312deg,#f2f2f2 0%,#f2f2f2 48%,#d91667 48%,#d91667 54.5%,transparent 54.5%,transparent 100%);
+}
+
+.card_selected .card__title {
+  color: #000;
+}
+
+.card_selected .card__content,
+.card_selected .card__header {
+  border-color: #d91667;
+}
+
+.card_selected .card__weight {
+  background-color: #d91667;
+}
+
+.card_selected-hover .card__tip {
+  background: linear-gradient(312deg,#f2f2f2 0%,#f2f2f2 48%,#e62e7a 48%,#e62e7a 54.5%,transparent 54.5%,transparent 100%);
+}
+
+.card_selected-hover .card__content,
+.card_selected-hover .card__header {
+  border-color: #e62e7a;
+}
+
+.card_selected-hover .card__weight {
+  background-color: #e62e7a;
+}
+
+.card_selected-hover .card__subtitle {
+  color: #e52e7a;
+}
+
+.card_disabled {
+  filter: grayscale(50%);
+}
+
+.card_disabled .card__tip {
+  background: linear-gradient(312deg,#f2f2f2 0%,#f2f2f2 48%,#b3b3b3 48%,#b3b3b3 54.5%,transparent 54.5%,transparent 100%);
+}
+
+.card_disabled .card__content,
+.card_disabled .card__header,
+.card_disabled .card__title {
+  color: #b3b3b3;
+  border-color: #b3b3b3;
+}
+
+.card_disabled .card__weight {
+  background-color: #b3b3b3;
+}
+
+.card_disabled+.card-section__label {
+  display: none;
+}
+
+.card_default+.card-section__label,
+.card_disabled~.card-section__label-disabled {
+  display: block;
+}
+
+.card_default~.card-section__label-selected,
+.card_selected+.card-section__label {
+  display: none;
+}
+
+.card_selected~.card-section__label-selected {
+  display: block;
+}
+.content-page {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 87.5%;
+  max-width: 1280px;
+  height: 480px;
+}
+.page-header {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.page-header .page-header__title {
+  font: 36px "Exo2.0 Thin";
+}
+@media screen and (max-width:1200px) {
+  .content-page {
+    width: 65%;
+    min-width: 700px;
+    height: auto;
+    justify-content: space-around;
+  }
+
+  .content-page .card-section__label {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width:720px) {
+  .content-page {
+    width: 84.5%;
+    min-width: 0;
+  }
+
+  .content-page .card-section__label {
+    margin-bottom: 17px;
+  }
+}
+@font-face {
+  font-family: "Exo2.0 Thin";
+  src: url("../fonts/Exo2.0-Thin.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page,
+.page_blackout::after,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/bg.png") 0 0;
+  background-size: cover;
+  color: #fff;
+  font: 13px 'Trebuchet MS Regular',sans-serif;
+}
+
+.page_blackout::after {
+  content: "";
+  position: fixed;
+  background: rgba(0,0,0,.5);
+  z-index: -3;
+}
