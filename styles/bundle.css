@@ -292,6 +292,7 @@ html {
 
 .page_blackout::after {
   content: "";
+  min-height: 100%;
   position: fixed;
   background: rgba(0,0,0,.5);
   z-index: -3;
