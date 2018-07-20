@@ -273,7 +273,6 @@
 }
 
 .page,
-.page_blackout::after,
 html {
   width: 100%;
   height: 100%;
@@ -284,6 +283,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   background: url("../images/bg.png") 0 0;
   background-size: cover;
   color: #fff;
@@ -292,8 +292,8 @@ html {
 
 .page_blackout::after {
   content: "";
-  min-height: 100%;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   background: rgba(0,0,0,.5);
   z-index: -3;
